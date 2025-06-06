@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pip install --upgrade \
     transformers \
     datasets \
