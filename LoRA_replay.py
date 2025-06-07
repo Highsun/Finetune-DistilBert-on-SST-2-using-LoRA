@@ -24,7 +24,7 @@ class LoRALinear(nn.Module):
         if r > 0:
             self.A = nn.Parameter(torch.empty(r, in_features))
             self.B = nn.Parameter(torch.empty(out_features, r))
-            nn.init.kaiming_uniform_(self.A, a=math.sqrt(5))
+            nn.init.normal_(self.A, mean=0.0, std=0.01)
             nn.init.zeros_(self.B)
         else:
             self.A = None

@@ -99,7 +99,7 @@ Configuration:
 - `alpha = 16`
 - `dropout = 0.1`
 - `learning_rate = 2e-4`
-- `epoches = 3`
+- `epochs = 3`
 
 Total trainable parameters ~**147k**, which is just **0.22%** of the full model (~67M), while still achieving **88.76%** accuracy.
 

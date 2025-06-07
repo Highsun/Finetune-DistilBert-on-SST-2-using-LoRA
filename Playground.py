@@ -1,3 +1,9 @@
+import warnings
+from transformers.utils import logging
+
+warnings.filterwarnings("ignore")
+logging.set_verbosity_error()
+
 import math
 import torch
 import torch.nn as nn
@@ -88,7 +94,11 @@ def lora_replay_sentence(sentence, model_dir="model/lora_replay_distilbert_sst2"
 
 if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    sentence = "The movie was absolutely fantastic!"
-
-    LoRA_eval(sentence, device=device)
-    lora_replay_sentence(sentence, device=device)
+    while True:
+        print("\nPlease input a sentence for sentiment classification (type 'exit' to quit):")
+        sentence = input(">> ")
+        if sentence.strip().lower() == "exit":
+            break
+        print("")
+        LoRA_eval(sentence, device=device)
+        lora_replay_sentence(sentence, device=device)
