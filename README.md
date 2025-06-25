@@ -10,9 +10,6 @@ A PEFT-based finetuning script is also provided in `./LoRA.py`; it is more effic
 .
 ├── dataset
 │   └── glue_sst2_local
-├── Google Colab
-│   ├── LoRA_replay.ipynb
-│   └── LoRA.ipynb
 ├── LICENSE
 ├── LoRA_replay.py
 ├── LoRA.py
@@ -60,12 +57,22 @@ It will:
 - Train the model on SST-2 for 3 epochs
 - Save weights to: `./model/lora_replay_distilbert_sst2.pt`
 
-> **Note:** The contents of the `dataset` and `model` folders can be obtained via [Baidu NetDisk link](url). Meanwhile, you will need to modify the file paths in the code to use the locally imported dataset and pretrained model.
-> **Changelog:** The dataset and model files have not been uploaded yet. Please temporarily use the default download method from the Hugging Face Hub. (Just use the orginal code)
+> **Note:**
+>
+> - It is strongly recommended to use an NVIDIA GeForce GPU with at least 4GB of VRAM. Please note that some 50-series NVIDIA GeForce GPUs may not be compatible with the latest versions of PyTorch.
+>
+> - The contents of the `dataset` and `model` folders can be obtained via [Baidu NetDisk link](url). Meanwhile, you will need to modify the file paths in the code to use the locally imported dataset and pretrained model.
+>
+> **Changelog:**
+>
+> - The dataset and model files have not been uploaded yet (2025.06.25). Please temporarily use the default download method from the Hugging Face Hub. (Just use the orginal code)
 
 ### Google Colab
 
-Upload the notebooks to Google Colab and run them using a T4 GPU or TPU instance.
+Click the links below to open the notebooks in Google Colab and run them using a T4 GPU or TPU instance.
+
+- [LoRA](https://colab.research.google.com/drive/1UcBTr-iVKMWpc4E1CiU2n_8jNLGhSj5E?usp=sharing)
+- [LoRA_replay](https://colab.research.google.com/drive/1AhMFGyjRQZw318AnID835yZJUt_-OT5A?usp=sharing)
 
 ## Inference
 
